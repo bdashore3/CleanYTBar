@@ -1,15 +1,12 @@
-PREFIX=$(THEOS)/toolchain/Xcode.xctoolchain/usr/bin/
-
-export ARCHS = arm64 arm64e
-export TARGET := iphone:clang:14.4
+ARCHS = arm64 arm64e
+TARGET := iphone:clang:latest:13.0
 INSTALL_TARGET_PROCESSES = YouTube
-
 
 include $(THEOS)/makefiles/common.mk
 
-TWEAK_NAME = YTNoShortsButton
+TWEAK_NAME = CleanYTBar
 
-YTNoShortsButton_FILES = Tweak.x
-YTNoShortsButton_CFLAGS = -fobjc-arc
+CleanYTBar_FILES = Tweak.x
+CleanYTBar_CFLAGS = -fobjc-arc
 
 include $(THEOS_MAKE_PATH)/tweak.mk
