@@ -16,4 +16,16 @@
 
     return nil; //returns nil so that the button isn't added to the YTPivotBarView
 }
+
+// Same as above but for item 3 (create button)
+- (void)setItemView3:(YTPivotBarItemView *)argument {
+    argument.navigationButton.hidden = YES;
+}
+
+- (YTPivotBarItemView *)itemView3 {
+    YTPivotBarItemView *orig = %orig;
+    orig.navigationButton.hidden = YES;
+
+    return nil;
+}
 %end
